@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini MMORPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <h1>Mini MMORPG</h1>
+            <div class="loading-spinner"></div>
+            <p id="loadingText">Connecting to server...</p>
+        </div>
+    </div>
+
+    <!-- Game UI -->
+    <div id="gameUI" class="game-ui hidden">
+        <!-- Connection Status -->
+        <div id="connectionStatus" class="connection-status">
+            <div class="status-indicator"></div>
+            <span id="statusText">Connecting...</span>
+        </div>
+
+        <!-- Player Info Panel -->
+        <div id="playerInfo" class="player-info">
+            <h3>Player Info</h3>
+            <div class="info-item">
+                <span class="label">Username:</span>
+                <span id="playerUsername">-</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Position:</span>
+                <span id="playerPosition">-</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Players Online:</span>
+                <span id="playersOnline">-</span>
+            </div>
+        </div>
+
+        <!-- Movement Instructions -->
+        <div id="movementInstructions" class="movement-instructions">
+            <h3>Controls</h3>
+            <div class="control-item">
+                <span class="key">↑</span>
+                <span class="action">Move Up</span>
+            </div>
+            <div class="control-item">
+                <span class="key">↓</span>
+                <span class="action">Move Down</span>
+            </div>
+            <div class="control-item">
+                <span class="key">←</span>
+                <span class="action">Move Left</span>
+            </div>
+            <div class="control-item">
+                <span class="key">→</span>
+                <span class="action">Move Right</span>
+            </div>
+            <div class="control-item">
+                <span class="key">↑+→</span>
+                <span class="action">Diagonal Movement</span>
+            </div>
+        </div>
+
+        <!-- Game Status -->
+        <div id="gameStatus" class="game-status">
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <script src="game.js"></script>
+</body>
+</html>
